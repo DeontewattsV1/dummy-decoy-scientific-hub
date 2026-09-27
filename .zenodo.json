@@ -1,0 +1,14 @@
+{
+  "title": "Dummy Decoy Scientific Hub",
+  "description": "Public index of per-manuscript GitHub repositories and Zenodo DOIs.",
+  "upload_type": "other",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "creators": [
+    {
+      "name": "Watts, Deonte",
+      "affiliation": "GoodShyt Group"
+    }
+  ],
+  "keywords": ["open science", "DOI catalog", "Zenodo", "GitHub"]
+}

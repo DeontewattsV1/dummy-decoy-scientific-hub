@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Dummy Decoy paper catalog",
+  "type": "object",
+  "required": ["hub", "template", "policy", "papers"],
+  "properties": {
+    "policy": { "const": "index-only" },
+    "papers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "repo", "status"]
+      }
+    }
+  }
+}

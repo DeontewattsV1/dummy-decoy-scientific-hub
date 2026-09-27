@@ -1,0 +1,36 @@
+name: validate-catalog
+on:
+  push:
+    paths:
+      - papers/**
+      - .github/workflows/validate-catalog.yml
+  pull_request:
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ensure catalog exists
+        run: test -f papers/catalog.json
+      - name: JSON syntax
+        run: python -m json.tool papers/catalog.json > /dev/null
+      - name: Policy and uniqueness
+        run: |
+          python - <<'PY'
+          import json, sys
+          from pathlib import Path
+          data = json.loads(Path('papers/catalog.json').read_text())
+          assert data.get('policy') == 'index-only'
+          papers = data.get('papers') or []
+          ids = [p.get('id') for p in papers]
+          if len(ids) != len(set(ids)):
+              sys.exit('duplicate paper ids')
+          allowed = {'template', 'spawned', 'doi-pending', 'released', 'embargoed', 'withdrawn'}
+          for p in papers:
+              if p.get('status') not in allowed:
+                  sys.exit('bad status')
+              if p.get('status') == 'released' and not p.get('concept_doi'):
+                  sys.exit('released paper missing concept_doi')
+          print('ok', len(papers))
+          PY

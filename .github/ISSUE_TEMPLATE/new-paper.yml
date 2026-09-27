@@ -1,0 +1,27 @@
+name: Spawn a paper repository
+description: Request a new child repository and catalog row
+title: "spawn: paper-"
+labels: ["spawn"]
+body:
+  - type: input
+    id: title
+    attributes:
+      label: Paper title
+    validations:
+      required: true
+  - type: input
+    id: slug
+    attributes:
+      label: Slug
+      placeholder: mcds-hypothesis
+    validations:
+      required: true
+  - type: dropdown
+    id: visibility
+    attributes:
+      label: Visibility
+      options:
+        - public (required for default Zenodo GitHub DOI)
+        - private / embargoed
+    validations:
+      required: true
