@@ -1,0 +1,14 @@
+.DS_Store
+*.pdf
+*.docx
+*.zip
+*.tar.gz
+*.h5
+*.hdf5
+*.fits
+*.bam
+*.sqlite
+.env
+**/*.secret
+node_modules/
+__pycache__/

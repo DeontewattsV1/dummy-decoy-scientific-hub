@@ -1,0 +1,23 @@
+{
+  "$schema": "./catalog.schema.json",
+  "hub": "DeontewattsV1/dummy-decoy-scientific-hub",
+  "template": "DeontewattsV1/paper-doi-template",
+  "policy": "index-only",
+  "updated": "2026-09-27",
+  "papers": [
+    {
+      "id": "paper-doi-template",
+      "title": "Paper DOI Template (not a manuscript)",
+      "authors": ["Deonte Watts"],
+      "year": 2026,
+      "repo": "https://github.com/DeontewattsV1/paper-doi-template",
+      "concept_doi": null,
+      "version_doi": null,
+      "version": null,
+      "status": "template",
+      "license": "CC-BY-4.0",
+      "subjects": ["open-science", "research-software"],
+      "notes": "Use this template to spawn one repository per manuscript."
+    }
+  ]
+}

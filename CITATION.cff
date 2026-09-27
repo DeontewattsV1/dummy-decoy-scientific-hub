@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "Cite individual papers by their child-repository DOI, not this hub, unless you are citing the catalog itself."
+title: "Dummy Decoy Scientific Hub"
+abstract: "Lightweight public index of per-manuscript GitHub repositories and their Zenodo DOIs."
+type: software
+authors:
+  - family-names: Watts
+    given-names: Deonte
+    affiliation: GoodShyt Group
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+repository-code: "https://github.com/DeontewattsV1/dummy-decoy-scientific-hub"
+url: "https://github.com/DeontewattsV1/dummy-decoy-scientific-hub"
+license: CC-BY-4.0
+keywords:
+  - open-science
+  - DOI
+  - zenodo
+  - research-catalog
+version: "1.0.0"
+date-released: "2026-09-27"
